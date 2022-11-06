@@ -13,28 +13,28 @@
 <body>
 <div class="container-md">
     <form method="post">
-        <h1>Registrace dítěte na letní tábor</h1>
+        <h1>Registrace byla úspěšně odeslána</h1>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Jméno dítěte</label>
-            [@spring.formInput path="form.firstName" attributes="${registrace?then('readonly','')}"/]
+            [@spring.formInput path="form.firstName" attributes="${rekapitulace?then('readonly','')}"/]
             <div class="error">[@spring.showErrors "<br>"/]</div>
 
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Příjmení dítěte</label>
-            [@spring.formInput path="form.surname"attributes="${registrace?then('readonly','')}" /]
+            [@spring.formInput path="form.surname"attributes="${rekapitulace?then('readonly','')}" /]
             <div class="error">[@spring.showErrors "<br>"/]</div>
 
         </div>
         <div class="mb-3">
             <label for="exampleFormControlTextarea1" class="form-label">Datum narození dítěte</label>
-            [@spring.formInput path="form.birthDate" fieldType="date" attributes="${registrace?then('readonly','')}"/]
+            [@spring.formInput path="form.birthDate" fieldType="date" attributes="${rekapitulace?then('readonly','')}"/]
             <div class="error">[@spring.showErrors "<br>"/]</div>
 
         </div>
         <div class="form-group mb-3">
             <label for="exampleFormControlSelect1">Pohlaví</label>
-            [@spring.formSingleSelect path="form.sex" attributes="${registrace?then('disabled','')}" options={
+            [@spring.formSingleSelect path="form.sex" attributes="${rekapitulace?then('disabled','')}" options={
             "": "",
             "1": "Dívka",
             "2": "Chlapec"
@@ -44,7 +44,7 @@
 
         <div class="form-group mb-3">
             <label for="exampleFormControlSelect1">Turnus</label>
-            [@spring.formRadioButtons path="form.turnus"  attributes="${registrace?then('disabled','')}" options={
+            [@spring.formRadioButtons path="form.turnus"  attributes="${rekapitulace?then('disabled','')}" options={
             "turnus1": "5.-11. července",
             "turnus2": "12.-18. července",
             "turnus3": "19.-25. července"
@@ -56,12 +56,12 @@
         </div>
         <div class="form-group mb-3">
             <label for="exampleFormControlInput1">E-mail na rodiče</label>
-            [@spring.formInput path="form.email"attributes="${registrace?then('readonly','')}" fieldType="email" /]
+            [@spring.formInput path="form.email"attributes="${rekapitulace?then('readonly','')}" fieldType="email" /]
             <div class="error">[@spring.showErrors "<br>"/]</div>
 
         </div>
         <div class="mb-3 form-check">
-            [@spring.formCheckbox path="form.agreement" attributes="${registrace?then('disabled','')}" /]
+            [@spring.formCheckbox path="form.agreement" attributes="${rekapitulace?then('disabled','')}" /]
             <label class="form-check-label" for="exampleCheck1">Souhlasím se zpracováním osobních údajů</label>
         </div>
         <div class="error">[@spring.showErrors "<br>"/]</div>
@@ -72,7 +72,7 @@
 
 
 <!-- JavaScript Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
 
 </body>
 </html>
