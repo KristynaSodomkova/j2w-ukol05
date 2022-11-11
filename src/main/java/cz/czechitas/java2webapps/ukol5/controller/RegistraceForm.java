@@ -58,7 +58,7 @@ public class RegistraceForm {
         return birthDate;
     }
 
-    public void setBirtDate(LocalDate birthDate) {
+    public void setBirthDate(LocalDate birthDate) {
         this.birthDate = birthDate;
     }
 
